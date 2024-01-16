@@ -2,7 +2,7 @@ import java.io.IOException;
 import java.util.Scanner;
 
 class Run {
-    static String calculator(String input) throws MistakeException {
+    public static String calc(String input) throws MistakeException {
            try {
                 String[] tokens = input.split(" ", 3);//делим одну строку на число-знак-число, ввод через пробел как в примере
                 int a = Integer.parseInt(tokens[0]); // 0-й символ - первое число
@@ -41,6 +41,6 @@ class Main {
         Scanner scanner = new Scanner(System.in); //обозначение объекта сканнер
         System.out.println("Введите Ваш пример:"); // приветственная строка
         String input = scanner.nextLine(); // запрос ввода
-        System.out.println("Ответ: " + Run.calculator(input));
+        System.out.println("Ответ: " + Run.calc(input));
     }
 }
