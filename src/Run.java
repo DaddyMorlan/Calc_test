@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 class MistakeException extends Exception{
     public MistakeException (String message){
-        super(message);;
+        super(message);
     }
 }
 
