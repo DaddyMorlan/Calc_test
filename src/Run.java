@@ -1,6 +1,12 @@
 import java.util.Scanner;
 
-class Run {
+class MistakeException extends Exception{
+    public MistakeException (String message){
+        super(message);;
+    }
+}
+
+class Main {
     public static String calc(String input) throws MistakeException {
            try {
                 String[] tokens = input.split(" ", 3);//делим одну строку на число-знак-число, ввод через пробел как в примере
@@ -35,11 +41,11 @@ class Run {
     }
 }
 
-class Main {
-    public static void main(String[] args) throws MistakeException{
+class Run {
+     public static void main(String[] args) throws MistakeException{
         Scanner scanner = new Scanner(System.in); //обозначение объекта сканнер
         System.out.println("Введите Ваш пример:"); // приветственная строка
         String input = scanner.nextLine(); // запрос ввода
-        System.out.println("Ответ: " + Run.calc(input));
+        System.out.println("Ответ: " + Main.calc(input));
     }
 }
